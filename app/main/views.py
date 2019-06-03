@@ -41,7 +41,7 @@ def new_post(id):
         new_post.save_post()
         return redirect(url_for('.category', id=category.id))
 
-    return render_template('new_pitch.html', post_form=form, category=category)
+    return render_template('new_post.html', post_form=form, category=category)
 
 @main.route('/categories/<int:id>')
 def category(id):
@@ -86,7 +86,7 @@ def view_post(id):
         abort(404)
     #
     comment = Comments.get_comments(id)
-    return render_template('view-pitch.html', posts=posts, comment=comment, category_id=id)
+    return render_template('view-post.html', posts=posts, comment=comment, category_id=id)
 
 
 #adding a comment
