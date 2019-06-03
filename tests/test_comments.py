@@ -6,7 +6,7 @@ class TestComments(unittest.TestCase):
 
     def setUp(self):
         self.user_James = User(username = 'James',password = 'potato', email = 'james@ms.com')
-        self.new_comment = Comments(pitches_id=12345,opinion='Review for movies',user_id=1,user = self.user_James )
+        self.new_comment = Comments(post_id=12345,opinion='Review for movies',user_id=1,user = self.user_James )
 
     def tearDown(self):
         Comments.query.delete()
@@ -16,7 +16,7 @@ class TestComments(unittest.TestCase):
         self.assertTrue(isinstance(self.new_comment,Comments))
 
     def test_check_instance_variables(self):
-        self.assertEquals(self.new_comment.pitches_id,12345)
+        self.assertEquals(self.new_comment.post_id,12345)
         self.assertEquals(self.new_comment.opinion,'Review for movies')
         self.assertEquals(self.new_comment.user_id,1)
         self.assertEquals(self.new_review.user,self.user_James)
