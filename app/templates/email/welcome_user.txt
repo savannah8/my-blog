@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to The Blog
+We have just seen a new post that might be interesting to you and we  want to welcome you to the blogging family

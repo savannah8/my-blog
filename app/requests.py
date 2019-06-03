@@ -17,7 +17,6 @@ def get_quotes():
 
         quotes_data = url.read()
         random_quote = json.loads(quotes_data)
-        print('============================')
         quotes_result = []
 
         if random_quote:
