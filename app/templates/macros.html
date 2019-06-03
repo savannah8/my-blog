@@ -1,0 +1,46 @@
+{% macro displayCategoryList(category_list) %}
+  {% for category in category_list%}
+        <div>
+
+          <a href="{{url_for('.category',id=category.id)}}"><p>{{category.name|upper}}</p></a>
+        </div>
+
+    {% endfor %}
+{% endmacro %}
+
+{% macro displayPosts(post_list) %}
+  {% for posts in post_list %}
+  <div class="col-md-12">
+    <div class="well">
+      <div class="row">
+        <p>{{posts.name|upper}}</p></a>
+        <div class="col-md-10 col-sm-12">
+            <h3>{{posts.content}}</h3>
+              <a href=" {{url_for('.view_post',id=posts.id)}}"><button class="btn btn-success">Read Comments</button></a>
+
+            <a href=" {{url_for('.post_comment',id=posts.id)}}"> <button class="btn btn-danger">Add COMMENT</button></a>
+        </div>
+        </div>
+    </HISTORY> ..
+
+  </div>
+  {% endfor %}
+{% endmacro %}
+
+
+{% macro displaySpecificPost(specific_post_list) %}
+ {% for comment in specific_post_list %}
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        <hr>
+        <p style="color:black; font-size: 25px;">{{comment.opinion}} </p>
+         <p style="text-align:right; color:#555652; font-size:10px;">{{comment.time_posted.strftime('%Y/%m/%d || %r') }}</p>
+    </div>
+  {% endfor %}
+{% endmacro %}
+
+ <!-- {% macro displayQuotes(quotes) %}  -->
+   <!-- {% for quote in quotes %}  -->
+   <!-- <p>{{quote.quote}}</p> -->
+<!-- <by<strong> {{quote.author}}</strong>  -->
+   <!-- {% endfor%} -->
+   <!-- {% endmacro %}  -->
