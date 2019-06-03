@@ -1,6 +1,6 @@
-# {Minute Pitch}
+# My-Blog
 #### Description
-This is an application where a user is give 60 seconds to pitch an idea on the different categories
+This is an application where a user can view blog posts by other people and can comment on them and gets an email once registered on notifications
 #### By **{Willen Gitonga}**
 ## Setup/Installation Requirements
 * git clone the url for the repository on your local machine and run the application on your terminal to view on a web browser
@@ -9,11 +9,11 @@ This is an application where a user is give 60 seconds to pitch an idea on the d
 ## BDD
 | Behaviour                       | Input                  | Output                                            |
 | :-------------:                 | :-------------:        | :-------------:                                   |
-|Display Various Pitch Categories | N/A                    | Various pitches grouped by category are displayed |
-|Display pitches                  | **Click** on a Category| A page with a list of pitches from the category   |
-|Add new pitch                    | **Click** New pitch    | User Should register/sign in to add new pitch     |
-|View Pitches                     | **Click** on a pitch   | View a pitch and comments                         |
-|Comment on a pitch               | **Click** Comment      | Registered User displays a commet form            |
+|Display Various Post Categories  | N/A                    | Various posts grouped by category are displayed   |
+|Display posts                    | **Click** on a Category| A page with a list of posts from the category     |
+|Add new post                     | **Click** New post     | User Should register/sign in to add new post      |
+|View Posts                       | **Click** on a post    | View a post and comments                          |
+|Comment on a post                | **Click** Comment      | Registered User displays a commet form            |
 ## Technologies Used
 Python
 
